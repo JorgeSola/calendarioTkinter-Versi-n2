@@ -370,7 +370,6 @@ class Calendar(ttk.Frame):
             diaInicial = calendar.monthrange(year,month)
 
         indiceSemana = (date(year, month , 1).weekday())
-        print(indiceSemana + 1, 'este el dia que empieza el mes')
 
         if month == 12:
             diaInicialMesAnterior = calendar.monthrange(year,1)
@@ -426,9 +425,6 @@ class Calendar(ttk.Frame):
                 self.indiceAños -= 1
                 self.month = dt.month + self.indiceMeses
                 self.year = dt.year + self.indiceAños
-                print(self.month,'mes verdadero = self.month')
-                print(self.listaMeses[self.month-1])                
-                print(self.year)
                 self.muestraMes(str(self.listaMeses[self.month-1]) + str(' ') + str(self.year))
                 self.delete()
                 self.newMonth(self.month, self.year)
@@ -442,9 +438,6 @@ class Calendar(ttk.Frame):
                 self.year = dt.year + self.indiceAños
                 self.delete()
                 self.newMonth(self.month, self.year)
-                print(self.month)
-                print(self.listaMeses[self.month-1])
-                print(self.year)
                 self.muestraMes(str(self.listaMeses[self.month-1]) + str(' ') + str(self.year))      
         
         return self.month
@@ -477,9 +470,6 @@ class Calendar(ttk.Frame):
                 self.indiceAños += 1
                 self.month = dt.month + self.indiceMeses
                 self.year = dt.year + self.indiceAños
-                print(self.month,'mes verdadero = self.month')
-                print(self.listaMeses[self.month])                
-                print(self.year)
                 self.muestraMes(str(self.listaMeses[self.month-1]) + str(' ') + str(self.year))
                 self.delete()
                 if self.month == 0:
@@ -495,9 +485,6 @@ class Calendar(ttk.Frame):
                 self.year = dt.year + self.indiceAños 
                 self.delete()
                 self.newMonth(self.month, self.year)
-                print(self.month)
-                print(self.listaMeses[self.month-1])
-                print(self.year)
                 self.muestraMes(str(self.listaMeses[self.month-1]) + str(' ') + str(self.year))
                       
         return self.month

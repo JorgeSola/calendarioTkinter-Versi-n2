@@ -39,7 +39,7 @@ class Day(ttk.Frame):
         s.theme_use('alt')
         s.configure('my.TLabel', font='Helvetica 8')
 
-        self.lbl = ttk.Label(self, text = self.cadena, style='my.TLabel', background='white', foreground= 'black', anchor = CENTER, borderwidth=2, relief="groove")
+        self.lbl = ttk.Label(self, text = self.cadena, style='my.TLabel', background='white', foreground= 'black', anchor = CENTER, borderwidth=2, relief="ridge")
         self.lbl.pack(side=TOP, fill=BOTH, expand=True)
 
     def valor(self, texto = None, letra = None):

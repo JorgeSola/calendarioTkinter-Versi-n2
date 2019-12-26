@@ -349,7 +349,7 @@ class Calendar(ttk.Frame):
 
     def delete(self):
         
-        listaFinDeSemana = ['7','8','14','15','21','22','28','29','35','36']        
+        listaFinDeSemana = ['5','6','12','13','19','20','26','27','33','34']        
         for i in range (0, len(self.listaEtiquetas)):
             
             if str(i) in listaFinDeSemana:

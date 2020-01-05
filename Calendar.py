@@ -5,7 +5,8 @@ from datetime import date
 import calendar
 
 dt = datetime.now()
-
+print(dt.month)
+print(dt.year)
 HEIGHTBTN = 50
 WIDTHBTN = 50
 
@@ -322,7 +323,7 @@ class Calendar(ttk.Frame):
         if self.month == 12:
             diaInicialMesAnterior = calendar.monthrange(self.year,1)
         else:
-            diaInicialMesAnterior = calendar.monthrange(self.year,self.month-1)
+            diaInicialMesAnterior = calendar.monthrange(self.year,self.month)
         
 
         indice1 = diaInicialMesAnterior[1] - indiceSemana + 1
@@ -499,9 +500,3 @@ class Calendar(ttk.Frame):
         self.lbl_mes.valor(cadena)
         self.lbl_mes.grid(column = 2 , row = 0, columnspan = 3)
    
-
-            
-
-        
-
-        
